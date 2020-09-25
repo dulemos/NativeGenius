@@ -33,11 +33,15 @@ export default () => {
         setTab([])
         setPlayerTurn(false);
       }else{
-        Alert.alert('Fim de jogo!', `Você fez ${colors.length - 1} pontos`)
-        navigation.goBack();
+        endGame();
       }
     }
     
+  }
+
+  const endGame = () => {
+    alert(`Fim de jogo! Você fez ${colors.length - 1} pontos`);
+    navigation.goBack();
   }
 
   const isSame = () => {
